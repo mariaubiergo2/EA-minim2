@@ -56,6 +56,11 @@ const UserSchema = new Schema<User>(
         active: {
             type: Boolean,
             required: false,
+        },
+        insignia: {
+            type: [String],
+            // enum: ["becari", "junior", "amateur", "sensei", "c-master"],
+            required: false,
         }
         
     },

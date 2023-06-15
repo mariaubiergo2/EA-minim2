@@ -14,10 +14,16 @@ const get_Users = async(pageNumber: number, nPerPage: number) => {
     return responseItem;
 };
 
+const get_Insignia = async(idUser: string) => {
+    const responseItem = await UserModel.findById({_id: idUser});
+    const response = responseItem?.insignia;
+    return response;
+};
+
 const get_User = async(idUser: string) => {
     const responseItem = await UserModel.findById({_id: idUser});
     return responseItem;
-};
+}
 
 const get_UserCount = async() => {
     const responseItem = await UserModel.find({}).count();
@@ -189,5 +195,5 @@ const get_not_following_count = async (idUser: string, data: User) => {
 export { get_AllUsers, get_Users, get_User, get_UserCount, get_UsersProfile, get_UserProfile, log_in,
     sign_up, update_User, add_Follow, delete_Follow, add_Challenge, disable_User, delete_User, 
     unable_User, get_following, get_not_following, get_following_count, get_followers_count, 
-    get_not_following_count, get_followers };
+    get_not_following_count, get_followers, get_Insignia };
 

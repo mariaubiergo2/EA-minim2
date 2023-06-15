@@ -4,7 +4,7 @@ import {registerCtrl, tokenCtrl} from "../controllers/auth"
 
 import { getAllUsers, getUsers, getUser, getUserCount, getUsersProfile, getUserProfile, updateUser,
      addFollow, deleteFollow, addChallenge, disableUser, deleteUser, unableUser, getFollowing, 
-     getNotFollowing, getFollowersCount, getNotFollowingCount, getFollowingCount, getFollowers } from "../controllers/user";
+     getNotFollowing, getFollowersCount, getNotFollowingCount, getFollowingCount, getFollowers, getInsignia } from "../controllers/user";
 
 const router = Router();
 
@@ -42,5 +42,7 @@ router.post("/disable/:idUser", checkJwt,disableUser); //Disable a user so that 
 router.post("/unable/:idUser", checkJwt,unableUser); //Disable a user so that he or she is not visible
 
 router.delete("/delete/:idUser",checkJwt, deleteUser); //Remove a user permanently
+
+router.get("/get/insignia/:idUser",checkJwt, getInsignia); //Get the insignias of the user
 
 export { router };

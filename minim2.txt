@@ -1,0 +1,11 @@
+https://github.com/mariaubiergo2/EA-minim2.git
+
+en el backend hi ha una variable més al model usuari: insignia. 
+
+pot obtenir els valors:
+ ["becari", "junior", "amateur", "sensei", "c-master"]
+
+en el frontend si té insignies les mostra en el apartat de perfil, sota la foto de perfil.
+if no té insignia no mostra.
+
+ les imatges estan guardades amb el nom de la insigna (creades amb IA).
