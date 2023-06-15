@@ -68,6 +68,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
     await prefs.clear();
   }
 
+  // TextStyle setColorText(BuildContext context) {
+  //   return TextStyle(
+  //     color: Theme.of(context)
+  //         .textTheme
+  //         .bodyText1
+  //         ?.color,
+  //     fontWeight: FontWeight.normal,
+  //     fontSize: 18);
+  // }
+
   Widget imageProfile() {
     return Stack(
       children: [
@@ -112,8 +122,8 @@ Widget insigniasPodium() {
     );
   } else {
     return SizedBox(
-        height: 40,
-        width: insigniasList.length*45.0,
+        height: 60,
+        width: insigniasList.length*50.0,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           shrinkWrap: false,
@@ -122,10 +132,16 @@ Widget insigniasPodium() {
             try {
               return Row(
                 children: [
-                  CircleAvatar(
-                    radius: 20,
-                    backgroundImage: AssetImage('images/'+insigniasList[index]+'.png'),
-                  ),
+                  Column (children: [
+                      CircleAvatar(
+                        radius: 20,
+                        backgroundImage: AssetImage('images/'+insigniasList[index]+'.png')),
+                      Text(
+                        insigniasList[index],
+                        style: TextStyle(
+                            fontSize: 14, color: Colors.amber),
+                      )]
+                      ),
                   SizedBox(width: 5),
                 ],
               );

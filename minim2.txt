@@ -9,3 +9,27 @@ en el frontend si té insignies les mostra en el apartat de perfil, sota la foto
 if no té insignia no mostra.
 
  les imatges estan guardades amb el nom de la insigna (creades amb IA).
+
+
+
+GHERKIN:
+
+Yo como usuario debería poder ver mis insignias
+
+**Para** poder ver mis insignias
+**Como** usuario
+**Quiero** visualizar las insignias ganadas
+**Escenario**:
+**Tengo** la sesión iniciada en la app
+**Dado** que ver mis insignias
+**Entonces** me dirijo a la pantalla de mi perfil
+**Entonces** debajo de la imagen de perfil veo iconos redondos que son mis insignias
+**Y** si es la ilustración de un becario es la insignia de becari tal como se lee debajo
+**Y** si es la ilustración de un junior es la insignia de junior tal como se lee debajo
+**Y** si es la ilustración de un amateur es la insignia de amateur tal como se lee debajo
+**Y** si es la ilustración de un sensei es la insignia de sensei tal como se lee debajo
+**Y** si es la ilustración de un master es la insignia de c-master tal como se lee debajo
+
+
+
+
